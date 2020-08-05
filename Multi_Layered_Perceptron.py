@@ -177,8 +177,8 @@ class Multi_Layered_Perceptron:
             Logloss: (float)
         '''
         
-        log_loss = target*np.log(output) + (1 - target)*np.log(1 - output) 
-        return -np.mean(log_loss)
+        log_loss = target*np.log(output) 
+        return -np.mean(np.sum(log_loss, axis=0))
 
     
     def GradientDescent(self, inputs, targets, epochs=1000, learning_rate=0.01, tolerance=1e-4):
@@ -244,7 +244,7 @@ class Multi_Layered_Perceptron:
                     output = self.forward_prop(Input)
                     dL += ((output - target)/(output * (1 - output)))/(batchsize) 
                 self.backward_prop(dL)
-            self.update_weights(learning_rate)
+                self.update_weights(learning_rate)
             y_pred = self.predict_proba(inputs)
             current_loss = self.logloss(targets, y_pred)
             self.losses.append(current_loss)
