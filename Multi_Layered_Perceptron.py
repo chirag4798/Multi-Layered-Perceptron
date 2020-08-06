@@ -207,7 +207,8 @@ class Multi_Layered_Perceptron:
             outputs      : Target to the neural Network (numpy.array)
             epochs       : Maximum iterations to repeat the gradient descent. (int)
             learning_rate: Constant multiplied to the update. Decides the step-size of the update. (float)
-            tolerance    : Maximum accepted deviation in the Loss in one epoch. (float)
+            beta1    : Term multiplied to the first Moment of Gradient (Adam Optimiser) (float)
+            beta2    : Term multiplied to the second Moment of Gradient (Adam Optimiser) (float)
         Returns:
             Trained Multi_Layered_Perceptron object.
         '''
@@ -236,6 +237,8 @@ class Multi_Layered_Perceptron:
             epochs       : Maximum iterations to repeat the mini-batch stochastic gradient descent. (int)
             learning_rate: Constant multiplied to the update. Decides the step-size of the update. (float)
             batchsize    : Number of samples to consider for computing the derivative and Weights and Biases. (int)
+            beta1    : Term multiplied to the first Moment of Gradient (Adam Optimiser) (float)
+            beta2    : Term multiplied to the second Moment of Gradient (Adam Optimiser) (float)
         Returns:
             Trained Multi_Layered_Perceptron object.
         '''
