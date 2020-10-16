@@ -1,7 +1,7 @@
 
 from utility_functions import *
 
-class Multi_Layered_Perceptron:
+class MultiLayeredPerceptron:
     
     '''
     A Multi Layered Perceptron model.
@@ -329,7 +329,7 @@ if __name__ == "__main__":
     # create a Multilayer Perceptron with default parameters
     print('Creating the architecture for Neural Network...')
     inputs = 784; layers = [32, 16]; output = 10
-    mlp = Multi_Layered_Perceptron(n_inputs=inputs, hidden_layers=layers, n_outputs=output, activation_function='sigmoid')
+    mlp = MultiLayeredPerceptron(n_inputs=inputs, hidden_layers=layers, n_outputs=output, activation_function='sigmoid')
 
     # training the network
     print('Training the Neural Network...')
