@@ -15,10 +15,28 @@ Sample Image from the dataset
 <a href="https://imgur.com/0jU7Odt"><img src="https://i.imgur.com/0jU7Odt.png" title="source: imgur.com" /></a>
 
 ## Network Architecture
+```
+# Model Architecture
+inputs = 784
+layers = [32, 16]
+output = 10
+mlp = Multi_Layered_Perceptron(n_inputs=inputs, hidden_layers=layers, n_outputs=output, activation_function='sigmoid')
+```
 <a href="https://imgur.com/K9iCVfl"><img src="https://i.imgur.com/K9iCVfl.png" title="source: imgur.com" /></a>
 
 ## Training
+```
+mlp.GradientDescent(X_train, Y_train, learning_rate=0.01, epochs=100,  beta1=0.9, beta2=0.999)
+mlp.plot_loss()
+```
 <a href="https://imgur.com/WZUeS74"><img src="https://i.imgur.com/WZUeS74.png" title="source: imgur.com" /></a>
 
+
+
 ## Evaluation
+```
+y_pred_train_classes = mlp.predict(X_train.values)
+y_pred_test_classes = mlp.predict(X_test.values)
+```
 <a href="https://imgur.com/KSDfcUE"><img src="https://i.imgur.com/KSDfcUE.png" title="source: imgur.com" /></a>
+
