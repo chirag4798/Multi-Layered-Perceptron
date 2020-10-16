@@ -20,7 +20,7 @@ Sample Image from the dataset
 inputs = 784
 layers = [32, 16]
 output = 10
-mlp = Multi_Layered_Perceptron(n_inputs=inputs, hidden_layers=layers, n_outputs=output, activation_function='sigmoid')
+mlp = MultiLayeredPerceptron(n_inputs=inputs, hidden_layers=layers, n_outputs=output, activation_function='sigmoid')
 ```
 <a href="https://imgur.com/K9iCVfl"><img src="https://i.imgur.com/K9iCVfl.png" title="source: imgur.com" /></a>
 
