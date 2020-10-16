@@ -1,5 +1,5 @@
 # MultiLayeredPerceptron
-Implementing Multi Layered Perceptron from scratch in python
+Neural Network / Multi Layered Perceptron implemeted from scratch using just vector and matrix computations. The goal of the projects was to understand the intricacies of Deep Neural Network training, gradient flow during backpropagation of loss and experimenting with various optimization methods for faster convergence.
 
 
 ## MNIST Dataset
